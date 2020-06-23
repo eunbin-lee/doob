@@ -1,0 +1,79 @@
+@charset "utf-8";
+/* reset */
+* {margin: 0; padding: 0;}
+li {list-style: none;}
+a {text-decoration: none;}
+body {font-family: 'Work Sans', sans-serif;}
+
+/* responsive web 320px */
+@media only screen and (min-width: 320px) {
+    #header .web {display: none;}
+
+    #header {
+        width: 100%; height: 40px;
+        position: relative;
+    }
+    #header .mobile.hamburger {
+        width: 30px; height: 30px;
+        background: url(../images/header_hamburger.png) no-repeat center center;
+        position: absolute;
+        top: 5px; left: 4.5px;
+        text-indent: -9999px;
+    }
+    #header .mobile.menuToggle {
+        width: 100%;
+        display: none;
+        position: absolute;
+        top: 38px; left: 0;
+        background: #fff;
+        transition: all 0.4s ease-in-out;
+        text-indent: 0;
+    }
+    #header .mobile.menuToggle ul li a {
+        width: 100%;
+        display: block;
+        padding-left: 15px;
+        line-height: 40px;
+        font-size: 12px;
+        font-weight: bold;
+        color: #314584;
+    }
+    #header .logo {
+        width: 69px; height: 30px;
+        background: url(../images/header_logo.png) no-repeat center center;
+        position: absolute;
+        top: 5px; left: 50%;
+        margin-left: -34.5px;
+        text-indent: -9999px;
+    }
+    #header .langList {
+        position: absolute;
+        top: 5px; right: 5px;
+    }
+    #header .langList #langSelect {
+        width: 50px; height: 30px;
+        float: left;
+        background: url(../images/header_lang_arrow.png) no-repeat center right;
+        font-family: inherit;
+        font-size: 12px;
+        color: #314584;
+        border: 0;
+        outline: 0;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+    }
+    #header .langList #langSelect option {
+        width: 100%;
+        text-align: center;
+        line-height: 35px;
+    }
+}
+
+@media only screen and (min-width: 1170px) {
+
+}
+
+@media only screen and (min-width: 1280px) {
+
+}
