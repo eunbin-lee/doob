@@ -2,78 +2,558 @@
 /* reset */
 * {margin: 0; padding: 0;}
 li {list-style: none;}
-a {text-decoration: none;}
-body {font-family: 'Work Sans', sans-serif;}
+a {text-decoration: none; color: #314584;}
+button {font-family: 'Work Sans', sans-serif;}
+.hidden {text-indent: -9999px;}
+body {
+    width: 100%;
+    overflow-x: hidden;
+    /* touch-action: none; */
+    font-family: 'Work Sans', sans-serif; 
+    color: #314584; 
+    padding-bottom: 500px;
+}
+.textContent {
+    font-size: 13px;
+    color: #666;
+    word-break: keep-all;
+}
+.sectionTitle {
+    font-size: 36px;
+    font-weight: bold;
+    word-break: keep-all;
+}
+.getInTouch_btn {
+    border: 0;
+    background-color: #ff3946;
+    text-align: center;
+    font-size: 13px;
+    color: #fff;
+    cursor: pointer;
+}
+.getInTouch_btn:hover {
+    text-decoration: underline;
+    text-decoration-color: #fff;
+    transition: all 1s;
+}
 
-/* responsive web 320px */
-@media only screen and (min-width: 320px) {
-    #header .web {display: none;}
+/* responsive web mobile */
+#header .web {display: none;}
 
-    #header {
-        width: 100%; height: 40px;
-        position: relative;
+#header {
+    width: 100%; height: 40px;
+    position: relative;
+}
+#header .mobile.hamburger {
+    width: 30px; height: 30px;
+    background: url(../images/header_hamburger.png) no-repeat center center;
+    position: absolute;
+    top: 5px; left: 4.5px;
+    text-indent: -9999px;
+}
+#header .mobile.menuToggle {
+    width: 100%;
+    display: none;
+    position: absolute;
+    top: 38px; left: 0;
+    background: #fff;
+    box-shadow: 0px 3px 3px rgba(0,0,0,0.4);
+    transition: all 0.4s ease-in-out;
+    text-indent: 0;
+    z-index: 100;
+}
+#header .mobile.menuToggle ul li a {
+    width: 100%;
+    display: block;
+    padding-left: 15px;
+    line-height: 40px;
+    font-size: 12px;
+    font-weight: bold;
+}
+#header .logo {
+    width: 69px; height: 30px;
+    background: url(../images/header_logo.png) no-repeat center center;
+    position: absolute;
+    top: 5px; left: 50%;
+    margin-left: -34.5px;
+    text-indent: -9999px;
+}
+#header .langList {
+    position: absolute;
+    top: 5px; right: 5px;
+}
+#header .langList #langSelect {
+    width: 50px; height: 30px;
+    float: left;
+    background: url(../images/header_lang_arrow.png) no-repeat center right;
+    font-size: 12px;
+    color: #314584;
+    border: 0;
+    outline: 0;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+#header .langList #langSelect option {
+    width: 100%;
+    text-align: center;
+    line-height: 40px;
+    color: #314584;
+}
+
+#container {width: 100%;}
+#container .mainVisual {width: 100%;}
+#container .mainVisual .mainTextBox {
+    padding: 5% 2%;
+    text-align: center;
+}
+#container .mainVisual .mainTextBox .mainTitle {
+    font-size: 50px;
+    font-weight: bold;
+    word-break: keep-all;
+}
+#container .mainVisual .mainTextBox .mainTitle > span {box-shadow: 0 20px 0 0 #f0f8fe;}
+#container .mainVisual .mainTextBox .mainTitle > span > span {
+    position: relative;
+    top: 20px;
+    padding: 0 1%;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+}
+#container .mainVisual .mainTextBox .mainContent {
+    padding: 40px 0 20px;
+    line-height: 24px;
+}
+#container .mainVisual .mainTextBox .mainContent br {display: none;}
+#container .mainVisual .mainTextBox .mainBtn {
+    width: 130px; height: 40px;
+    border-radius: 40px;
+    line-height: 40px;
+    font-weight: bold;
+}
+#container .mainVisual .mainTextBox .mainBtnSide {
+    font-size: 13px;
+    margin-left: 10px;
+}
+
+#sec01 {
+    width: 100%;
+    margin: 50px auto;
+}
+#sec01 .sec01_title {text-align: center;}
+#sec01 .sec01_btn {
+    width: 130px; height: 36px;
+    margin: 20px auto;
+    display: block;
+    border-radius: 36px;
+    line-height: 36px;
+}
+#sec01 .sec01_cntList {
+    width: 300px; height: 320px;
+    margin: 0 auto 20px;
+    padding: 120px 25px 30px;
+    box-sizing: border-box;
+    box-shadow: 2px 2px 8px #ddd;
+    background-size: auto auto;
+    background-position: 25px 40px;
+    background-repeat: no-repeat;
+}
+#sec01 .sec01_cntList:first-child {background-image: url(../images/sec1_icon1.png);}
+#sec01 .sec01_cntList:last-child {background-image: url(../images/sec1_icon2.png);}
+#sec01 .sec01_cntList .sec01_cntTitle {
+    line-height: 30px;
+    font-size: 24px;
+    font-weight: bold;
+}
+#sec01 .sec01_cntList .sec01_content {
+    margin-top: 20px;
+    line-height: 24px;
+    color: #314584;
+}
+
+#sec02 {
+    width: 100%;
+    margin: 80px auto;
+}
+#sec02 .sec02_titleBox {text-align: center;}
+#sec02 .sec02_category {
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #ff3946;
+}
+#sec02 .sec02_title {
+    width: 100%;
+    margin: 10px 0 25px;
+}
+#sec02 .sec02_cntBox {
+    width: 100%;
+    overflow-x: scroll;
+    -webkit-overflow-scrolling: touch;
+    padding: 0 20px;
+}
+#sec02 .sec02_cntBox .sec02_cntList {
+    width: 830px;
+    margin-top: 20px;
+}
+#sec02 .sec02_cntBox .sec02_cntList .sec02_content {
+    width: 250px;
+    display: inline-block;
+    margin-left: 10px;
+    line-height: 24px;
+}
+
+#sec03_more {display: none;}
+#sec03_more:checked ~ .sec03_workBox .sec03_workList02 {display: block;}
+#sec03_more ~ .sec03_workBox .sec03_workList02 {display: none;}
+#sec03_more:checked ~ .sec03_moreBtn .sec03_morePlus {display: none;}
+#sec03_more ~ .sec03_moreBtn .sec03_morePlus {display: block;}
+#sec03_more:checked ~ .sec03_moreBtn .sec03_moreMinus {display: block;}
+#sec03_more ~ .sec03_moreBtn .sec03_moreMinus {display: none;}
+
+#sec03 .sec03_title {text-align: center;}
+#sec03 .sec03_workBox {
+    overflow: hidden;
+    margin-top: 25px;
+}
+#sec03 .sec03_workBox ul li a {
+    width: 46%; height: 100px;
+    float: left;
+    margin: 7px 2%;
+    background: url(../images/sec03_work.jpg) no-repeat center center;
+    background-size: 100% auto;
+}
+#sec03 .sec03_moreBtn label {
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+    color: #ff3946;   
+    cursor: pointer;
+}
+
+#sec04 {
+    width: 100%;
+    margin: 80px auto;
+}
+#sec04 .sec04_category {
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #ff3946;
+}
+#sec04 .sec04_title {
+    margin: 10px 0 25px;
+    text-align: center;
+}
+#sec04 .sec04_blogBox {margin-top: 40px;}
+#sec04 .sec04_blogBox ul li a {
+    width: 300px;
+    display: block;
+    overflow: hidden;
+    margin: 20px auto;
+    padding: 35px 30px;
+    background: #fff;
+    box-sizing: border-box;
+    box-shadow: 2px 2px 8px #ddd;
+    transition: all 0.4s;
+}
+#sec04 .sec04_blogBox .sec04_blogTitle {font-weight: bold;}
+#sec04 .sec04_blogBox .sec04_blogDate {
+    font-size: 12px;
+    color: #666;
+    margin: 15px 0 30px;
+    transition: all 0.5s;
+}
+#sec04 .sec04_blogBox .sec04_blogText {line-height: 24px;}
+#sec04 .sec04_blogBox .sec04_blogBtn {
+    width: 30px; height: 18px;
+    float: right;
+    margin-top: 30px;
+    border: 0;
+    background: url(../images/sec4_arrow_go.png) no-repeat;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+#sec04 .sec04_blogBox ul li a:hover {
+    background: #ff3946;
+    color: #fff;
+}
+#sec04 .sec04_blogBox ul li a:hover .sec04_blogDate {color: #fff;}
+#sec04 .sec04_blogBox ul li a:hover .sec04_blogBtn {
+    background: url(../images/sec4_arrow_go_hover.png) no-repeat;
+}
+
+#sec05 {
+    width: 100%;
+    margin: 0 auto;
+}
+#sec05 .sec05_category {
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #ff3946;
+}
+#sec05 .sec05_title {
+    margin: 10px 0 25px;
+    text-align: center;
+}
+#sec05 .sec05_infoBox {margin-top: 30px;}
+#sec05 .sec05_infoBox .sec05_userInfo {
+    width: 94%;
+    margin: 0 3% 15px;
+}
+#sec05 .sec05_infoBox input {
+    width: 100%; height: 40px;
+    margin-top: 5px;
+    padding: 0 20px;
+    background: #f4fafe;
+    box-sizing: border-box;
+    border: 0;
+}
+#sec05 .sec05_infoBox label {
+    font-weight: bold;
+    color: #314584;
+}
+#sec05 .sec05_infoBox .sec05_message input {height: 100px;}
+
+
+/* responsive web 768px */
+@media only screen and (min-width: 768px) {
+    #container .mainVisual .mainTextBox .mainContent br {display: inline;}
+
+    #sec01 .sec01_cntBox {
+        width: 670px;
+        margin: 30px auto;
+        overflow: hidden;
+        padding: 2px;
     }
-    #header .mobile.hamburger {
-        width: 30px; height: 30px;
-        background: url(../images/header_hamburger.png) no-repeat center center;
+    #sec01 .sec01_cntList {float: left;}
+    #sec01 .sec01_cntList:first-child {margin-right: 50px;}
+
+    #sec02 .sec02_cntBox .sec02_cntList {margin: 0 auto;}
+
+    #sec03 .sec03_workBox ul li a {
+        width: 31.3334%; height: 130px;
+        margin: 7px 1%;
+    }
+
+    #sec04 .sec04_blogBox {
+        width: 660px;
+        margin: 0 auto;
+        overflow: hidden;
+    }
+    #sec04 .sec04_blogBox ul li a {
+        float: left;
+        margin: 0 30px 20px 0;
+    }
+}
+
+/* responsive web 830px */
+@media only screen and (min-width: 830px) {
+    #sec02 .sec02_cntBox {overflow-x: initial;}
+}
+
+/* responsive web 1024px */
+@media only screen and (min-width: 1024px) {
+    #header .mobile {display: none;}
+    #header .web {display: block;}
+
+    #header {height: 100px;}
+    #header .logo {top: 55px; left:100px;}
+    #header .web.menu {
         position: absolute;
-        top: 5px; left: 4.5px;
-        text-indent: -9999px;
+        top: 13px; left: 170px;
     }
-    #header .mobile.menuToggle {
-        width: 100%;
-        display: none;
-        position: absolute;
-        top: 38px; left: 0;
-        background: #fff;
-        transition: all 0.4s ease-in-out;
-        text-indent: 0;
-    }
-    #header .mobile.menuToggle ul li a {
-        width: 100%;
+    #header .web.menu ul li {display: inline-block;}
+    #header .web.menu ul li a {
         display: block;
-        padding-left: 15px;
-        line-height: 40px;
+        margin: 0 15px;
+        padding: 5px 0;
         font-size: 12px;
         font-weight: bold;
-        color: #314584;
+        transition: all 0.15s;
     }
-    #header .logo {
-        width: 69px; height: 30px;
-        background: url(../images/header_logo.png) no-repeat center center;
+    #header .web.menu ul li a:hover {color: #ff3946;}
+    #header .langList {top: 60px; right: 250px;}
+    #header .contactBtn {
+        width: 130px; height: 40px;
         position: absolute;
-        top: 5px; left: 50%;
-        margin-left: -34.5px;
-        text-indent: -9999px;
-    }
-    #header .langList {
-        position: absolute;
-        top: 5px; right: 5px;
-    }
-    #header .langList #langSelect {
-        width: 50px; height: 30px;
-        float: left;
-        background: url(../images/header_lang_arrow.png) no-repeat center right;
-        font-family: inherit;
-        font-size: 12px;
-        color: #314584;
+        top: 55px; right: 80px;
         border: 0;
-        outline: 0;
-        -webkit-appearance: none;
-        -moz-appearance: none;
-        appearance: none;
+        background: url(../images/header_contact_arrow.png) no-repeat center right 20px;
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 2px 2px 5px #ddd;
+        text-align: left;
+        text-indent: 20px;
+        font-size: 12px;
+        font-weight: bold;
+        color: #ff3946;
+        transition: all 0.4s;
+        cursor: pointer;
+
     }
-    #header .langList #langSelect option {
-        width: 100%;
-        text-align: center;
-        line-height: 35px;
+    #header .contactBtn:hover {background-color: #eee;}
+
+    #sec03 .sec03_workBox ul li a {height: 180px;}
+
+    #sec04 .sec04_blogBox {width: 970px;}
+    #sec04 .sec04_blogBox ul li:last-child a {margin-right: 0;}
+
+    #sec05 .sec05_infoBox .sec05_email_subject {
+        width: 94%;
+        margin: 0 3% 15px;
+        overflow: hidden;
     }
+    #sec05 .sec05_infoBox .sec05_email_subject .sec05_userInfo {
+        width: 48%;
+        margin: 0;
+        float: left;
+    }
+    #sec05 .sec05_infoBox .sec05_email_subject .sec05_email {margin-right: 4%;}
 }
 
+/* responsive web 1170px */
 @media only screen and (min-width: 1170px) {
+    #header {
+        width: 1170px;
+        margin: 0 auto;
+    }
+    #container .mainVisualWrap {
+        height: 800px;
+        background-image: url(../images/main_illust.png), url(../images/bg_shape1.png);
+        background-size: auto auto, auto 800px;
+        background-position: top right, top right;
+        background-repeat: no-repeat;
+    }
+    #container .mainVisual {
+        width: 1070px;
+        margin: 0 auto 50px;
+    }
+    #container .mainVisual .mainTextBox {
+        width: 450px;
+        padding: 200px 0;
+        text-align: left;
+    }
+    #container .mainVisual .mainTextBox .mainTitle span {box-shadow: none;}
+    #container .mainVisual .mainTextBox .mainDescription {
+        width: 400px;
+        padding: 60px 0 40px;
+    }
 
-}
+    .sec01_wrap {
+        width: 100%;
+        background: url(../images/bg_shape2.png) no-repeat center left;
+        background-size: auto 400px;
+    }
+    #sec01 {
+        width: 1070px;
+        margin: 0 auto 100px;
+        overflow: hidden;
+    }
+    #sec01 .sec01_titleBox {
+        width: 300px;
+        float: left;
+        margin-right: 30px;
+        padding-top: 50px;
+    }
+    #sec01 .sec01_titleBox .sec01_title {text-align: left;}
+    #sec01 .sec01_titleBox .sec01_btn {margin: 40px 0;}
 
-@media only screen and (min-width: 1280px) {
+    #sec01 .sec01_cntBox {
+        width: 670px;
+        float: right;
+        margin: initial;
+        padding-top: 20px;
+    }
+    
+    .sec02_wrap {
+        width: 100%;
+        background: url(../images/bg_shape3.png) no-repeat center right;
+        background-size: auto 250px;
+    }
+    #sec02 {
+        width: 1070px;
+        margin: 0 auto 100px;
+        overflow: hidden;
+        background: url(../images/sec2_illust.png) no-repeat center left;
+        background-size: auto 250px;
+    }
+    #sec02 .sec02_titleBox {
+        width: 540px;
+        float: right;
+        margin-right: 20px;
+        text-align: left;
+    }
+    #sec02 .sec02_cntBox {
+        width: 540px;
+        float: right;
+        overflow: hidden;
+        margin-right: 20px;
+        padding: 0;
+    }
+    #sec02 .sec02_cntBox .sec02_cntList {width: 1200px;}
+    #sec02 .sec02_cntBox .sec02_cntList .sec02_content {
+        width: 350px;
+        margin-left: 0;
+        margin-right: 20px;
+        box-sizing: border-box;
+    }
+    #sec02 .sec02_prev {
+        width: 30px; height: 18px;
+        margin: 20px 0;
+        display: inline-block;
+        background: url(../images/sec_arrow_prev.png) no-repeat center center;
+        border: 0;
+        cursor: pointer;
+    }
+    #sec02 .sec02_prev:hover {
+        background: url(../images/sec_arrow_prev_hover.png) no-repeat center center;
+        transition: all 0.4s ease-out;
+    }
+    #sec02 .sec02_next {
+        width: 30px; height: 18px;
+        margin: 20px 0;
+        display: inline-block;
+        background: url(../images/sec_arrow_next.png) no-repeat center center;
+        border: 0;
+        cursor: pointer;
+    }
+    #sec02 .sec02_next:hover {
+        background: url(../images/sec_arrow_next_hover.png) no-repeat center center;
+        transition: all 0.4s ease-out;
+    }
 
+    .sec03_wrap {
+        width: 100%;
+        background: url(../images/bg_shape4.png) no-repeat top left;
+        background-size: auto 500px;
+    }
+    #sec03 {
+        width: 1070px;
+        margin: 0 auto;
+    }
+    #sec03 .sec03_title {text-align: left;}
+    #sec03 .sec03_workBox ul li a {
+        width: 31.9334%; height: 200px;
+        margin: 8px 0.7%;
+    }
+
+    .sec04_wrap {
+        width: 100%;
+        background: url(../images/bg_shape5.png) no-repeat top right;
+        background-size: auto 400px;
+    }
+    #sec04 {
+        width: 1070px;
+        margin: 80px auto;
+    }
+    #sec04 .sec04_titleBox {text-align: left;}
+    #sec04 .sec04_blogBox {width: 100%;}
+    #sec04 .sec04_blogBox ul li a {width: 31%;}
+
+    #sec05 {
+        width: 1070px;
+        margin: 80px auto;
+    }
+    #sec05 .sec05_titleBox {text-align: left;}
 }
