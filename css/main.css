@@ -11,7 +11,6 @@ body {
     /* touch-action: none; */
     font-family: 'Work Sans', sans-serif; 
     color: #314584; 
-    padding-bottom: 500px;
 }
 .textContent {
     font-size: 13px;
@@ -70,7 +69,7 @@ body {
     font-size: 12px;
     font-weight: bold;
 }
-#header .logo {
+#header .header_logo {
     width: 69px; height: 30px;
     background: url(../images/header_logo.png) no-repeat center center;
     position: absolute;
@@ -78,11 +77,11 @@ body {
     margin-left: -34.5px;
     text-indent: -9999px;
 }
-#header .langList {
+#header .header_langList {
     position: absolute;
     top: 5px; right: 5px;
 }
-#header .langList #langSelect {
+#header .header_langList #langSelect {
     width: 50px; height: 30px;
     float: left;
     background: url(../images/header_lang_arrow.png) no-repeat center right;
@@ -94,7 +93,7 @@ body {
     -moz-appearance: none;
     appearance: none;
 }
-#header .langList #langSelect option {
+#header .header_langList #langSelect option {
     width: 100%;
     text-align: center;
     line-height: 40px;
@@ -126,7 +125,7 @@ body {
 }
 #container .mainVisual .mainTextBox .mainContent br {display: none;}
 #container .mainVisual .mainTextBox .mainBtn {
-    width: 130px; height: 40px;
+    width: 135px; height: 40px;
     border-radius: 40px;
     line-height: 40px;
     font-weight: bold;
@@ -142,11 +141,11 @@ body {
 }
 #sec01 .sec01_title {text-align: center;}
 #sec01 .sec01_btn {
-    width: 130px; height: 36px;
+    width: 130px; height: 40px;
     margin: 20px auto;
     display: block;
-    border-radius: 36px;
-    line-height: 36px;
+    border-radius: 40px;
+    line-height: 40px;
 }
 #sec01 .sec01_cntList {
     width: 300px; height: 320px;
@@ -218,9 +217,17 @@ body {
 #sec03 .sec03_workBox ul li a {
     width: 46%; height: 100px;
     float: left;
+    overflow: hidden;
     margin: 7px 2%;
-    background: url(../images/sec03_work.jpg) no-repeat center center;
-    background-size: 100% auto;
+}
+#sec03 .sec03_workBox ul li a img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    transition: all 0.4s;
+}
+#sec03 .sec03_workBox ul li a:hover img {
+    overflow: hidden;
+    transform: scale(1.02, 1.02);
 }
 #sec03 .sec03_moreBtn label {
     text-align: center;
@@ -314,7 +321,60 @@ body {
     color: #314584;
 }
 #sec05 .sec05_infoBox .sec05_message input {height: 100px;}
+#sec05 .sec05_infoBox .sec05_sendBtn {
+    width: 135px; height: 40px;
+    margin: 30px auto;
+    display: block;
+    border-radius: 40px;
+    line-height: 40px;
+    font-weight: bold;
+}
 
+.footer_wrap {
+    width: 100%;
+    padding: 50px 0;
+    background: #314584;
+}
+#footer {
+    text-align: center;
+    color: #fff;
+}
+#footer .footer_companyName {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 12px;
+    font-weight: bold;
+}
+#footer .footer_companyIdentity {
+    margin-top: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 30px;
+    font-weight: bold;
+    color: #ff3946;
+}
+#footer .footer_menu {
+    margin: 20px 0;
+    overflow: hidden;
+}
+#footer .footer_menu ul li {
+    display: inline-block;
+    margin: 10px;
+}
+#footer .footer_menu ul li a {
+    letter-spacing: 1px;
+    font-size: 12px;
+    font-weight: bold;
+    color: #fff;
+}
+#footer .footer_copyright {font-size: 10px;}
+#footer .footer_snsBox {margin-top: 30px;}
+#footer .footer_snsBox ul li {
+    margin: 0 15px;
+    display: inline-block;
+    cursor: pointer;
+}
+#footer .footer_snsBox ul li i {display: block;}
 
 /* responsive web 768px */
 @media only screen and (min-width: 768px) {
@@ -358,13 +418,13 @@ body {
     #header .web {display: block;}
 
     #header {height: 100px;}
-    #header .logo {top: 55px; left:100px;}
-    #header .web.menu {
+    #header .header_logo {top: 55px; left:100px;}
+    #header .web.header_menu {
         position: absolute;
         top: 13px; left: 170px;
     }
-    #header .web.menu ul li {display: inline-block;}
-    #header .web.menu ul li a {
+    #header .web.header_menu ul li {display: inline-block;}
+    #header .web.header_menu ul li a {
         display: block;
         margin: 0 15px;
         padding: 5px 0;
@@ -372,9 +432,9 @@ body {
         font-weight: bold;
         transition: all 0.15s;
     }
-    #header .web.menu ul li a:hover {color: #ff3946;}
-    #header .langList {top: 60px; right: 250px;}
-    #header .contactBtn {
+    #header .web.header_menu ul li a:hover {color: #ff3946;}
+    #header .header_langList {top: 60px; right: 250px;}
+    #header .header_contactBtn {
         width: 130px; height: 40px;
         position: absolute;
         top: 55px; right: 80px;
