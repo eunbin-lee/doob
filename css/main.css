@@ -96,7 +96,7 @@ body {
 #header .header_langList #langSelect option {
     width: 100%;
     text-align: center;
-    line-height: 40px;
+    line-height: 45px;
     color: #314584;
 }
 
@@ -227,9 +227,10 @@ body {
 }
 #sec03 .sec03_workBox ul li a:hover img {
     overflow: hidden;
-    transform: scale(1.02, 1.02);
+    transform: scale(1.01, 1.01);
 }
 #sec03 .sec03_moreBtn label {
+    margin-top: 20px;
     text-align: center;
     font-size: 14px;
     font-weight: bold;
@@ -320,7 +321,11 @@ body {
     font-weight: bold;
     color: #314584;
 }
-#sec05 .sec05_infoBox .sec05_message input {height: 100px;}
+#sec05 .sec05_infoBox .sec05_message input {
+    height: 100px;
+    /* word-break: break-all;
+    white-space: pre; */
+}
 #sec05 .sec05_infoBox .sec05_sendBtn {
     width: 135px; height: 40px;
     margin: 30px auto;
@@ -452,7 +457,7 @@ body {
         cursor: pointer;
 
     }
-    #header .contactBtn:hover {background-color: #eee;}
+    #header .header_contactBtn:hover {background-color: #eee;}
 
     #sec03 .sec03_workBox ul li a {height: 180px;}
 
@@ -551,7 +556,10 @@ body {
         margin-right: 20px;
         padding: 0;
     }
-    #sec02 .sec02_cntBox .sec02_cntList {width: 1200px;}
+    #sec02 .sec02_cntBox .sec02_cntList {
+        width: 1200px;
+        transition: all 0.4s;
+    }
     #sec02 .sec02_cntBox .sec02_cntList .sec02_content {
         width: 350px;
         margin-left: 0;
@@ -568,7 +576,7 @@ body {
     }
     #sec02 .sec02_prev:hover {
         background: url(../images/sec_arrow_prev_hover.png) no-repeat center center;
-        transition: all 0.4s ease-out;
+        transition: all 0.3s ease-out;
     }
     #sec02 .sec02_next {
         width: 30px; height: 18px;
@@ -580,7 +588,7 @@ body {
     }
     #sec02 .sec02_next:hover {
         background: url(../images/sec_arrow_next_hover.png) no-repeat center center;
-        transition: all 0.4s ease-out;
+        transition: all 0.3s ease-out;
     }
 
     .sec03_wrap {
